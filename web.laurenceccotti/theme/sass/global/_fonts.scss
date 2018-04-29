@@ -1,0 +1,43 @@
+//
+// Fonts
+// --------------------------------------------------
+
+//google fonts
+//
+//font-face($name, $font-files, $eot, $weight, $style)
+
+@include font-face("Lighthouse", font-files("Lighthouse/Lighthouse.woff", "Lighthouse/Lighthouse.ttf", "Lighthouse/Lighthouse.svg"), "Lighthouse/Lighthouse.eot");
+
+
+
+$curved-font: "Lighthouse";
+$stick-font: "Josefin Sans";
+$stretch-font: "Roboto Condensed";
+$geek-font: "Anonymous Pro";
+
+
+
+//FONT SIZES
+
+$small-font : 13px;
+$smalmed-font : 15px;
+$medium-font : 17px;
+$large-font : 22px;
+$wide-font : 30px;
+
+$tool-font-size: $small-font;
+$lg-font-size: $smalmed-font;
+$lg-percnt-font-size: $large-font;
+
+
+//LETTER SPACINGS
+
+$small-lttrspac: 1px;
+$medium-lttrspac: 3px;
+$wide-lttrspac: 5px;
+$wider-lttrspac: 6px;
+
+$lg-lttrspac: $small-lttrspac;
+$tool-lttrspac: $medium-lttrspac;
+
+$circle-line-height: 70px;

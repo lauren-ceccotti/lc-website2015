@@ -1,0 +1,363 @@
+
+//// OPEN MENU MOBILE ITEM
+.fa-chevron-down{
+	position: absolute;
+	z-index: 2;
+	font-size: 1.3em;
+	top: 0;
+	line-height: normal;
+	background: $main-color;
+	color: $anti-main-color;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 3px;
+	opacity: 0;
+	//display: none;
+	@include transition (color, 0.4s);
+	cursor: pointer;
+}
+
+.fa-chevron-down:hover{
+	cursor: pointer;
+	color: $color-projects;
+
+}
+
+//// LIST
+
+//pour decalage menu bottom
+nav#projects_list ul, #project_side{
+	padding-bottom: 65px;
+}
+
+nav#projects_list{
+
+	overflow: hidden;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	//height: 100%;
+	height: 0;
+	background-color: $unselected;
+
+	li{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		//background-attachment: fixed;
+		max-width: ($tablette-wide)-1;
+		display: table;
+		width: 100%;
+		opacity: 0;
+	}
+
+	li.mosaique{
+		//background-image: url(theme/images/proj_link/mosaique.jpg);
+		background-image: image-url("proj_link/mosaique.jpg");
+	}
+	li.spaceodyssey{
+		background-image: image-url("proj_link/spaceodyssey.jpg");
+	}
+	li.helenkeller{
+		background-image: image-url("proj_link/helenkeller.jpg");
+	}
+	li.lecomptoir{
+		background-image: image-url("proj_link/lecomptoir.jpg");
+	}
+	li.lokisalle{
+		background-image: image-url("proj_link/lokisalle.jpg");
+	}
+	li.laurenceccotti{
+		background-image: image-url("proj_link/laurenceccotti.jpg");
+	}
+	li.noteon{
+		background-image: image-url("proj_link/noteon.jpg");
+	}
+	li.aaaf{
+		background-image: image-url("proj_link/aaaf.jpg");
+	}
+	li.ffa{
+		background-image: image-url("proj_link/ffa.jpg");
+	}
+	li.prs{
+		background-image: image-url("proj_link/prs.jpg");
+	}
+	li.massaud{
+		background-image: image-url("proj_link/massaud.jpg");
+	}
+	li.metzgerboucherie{
+		background-image: image-url("proj_link/metzgerboucherie.jpg");
+	}
+	li.metzgercorp{
+		background-image: image-url("proj_link/metzgercorp.jpg");
+	}
+	li.fusebox{
+		background-image: image-url("proj_link/fusebox.jpg");
+	}
+	li.sophiebellot{
+		background-image: image-url("proj_link/sophiebellot.jpg");
+	}
+
+
+	a{
+		display: table-cell;
+		height: $proj-list-h;
+		background: rgba($anti-main-color, 0.8);
+		padding: 0 35px;
+
+		color: $main-color;
+		font-family: $stick-font;
+		letter-spacing: $medium-lttrspac;
+		font-size: $small-font;
+		text-align: center;
+		text-transform: capitalize;
+		vertical-align: middle;
+		line-height: 25px;
+
+		border-bottom: 1px solid $unselected;
+		@include transition(background, color, border, 0.4s);
+		cursor: pointer;
+
+	}
+	a:hover, a.active{
+		background: rgba($main-color, 0.2);
+		color: $anti-main-color;
+		border-bottom: 1px solid $color-projects;
+		cursor: pointer;
+	}
+}
+
+
+///////////////////
+#project_side{
+	//opacity: 0;
+}
+
+//@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+#project_content::before{
+	content:"Projects";
+    display: block;
+    overflow: hidden;
+    @include vertical-align(absolute);
+    width: 100%;
+    color: $unselected; 
+
+    font-family: $curved-font;
+	font-size: 8.5em;
+	font-size: 17.5vw;
+    letter-spacing: 10px;
+    text-align: center;
+
+	opacity:0;
+	@include animation(fadeIn_light ease-in 1);
+	@include animation-fill-mode(forwards);
+	@include animation-duration(1s);
+
+}
+
+#project_content{
+	right: 0;
+	top: 0;
+	position: absolute;
+	width: $full-size;
+	height: 100%;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+
+	.projet{
+
+		color: $anti-main-color;
+		font-family: $geek-font;
+		position: relative;
+		min-height: 100%;
+
+		.projet_top{
+
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			.curtain{
+				//background-color: rgba($anti-main-color, 0.1);
+				//@include background-image(linear-gradient(rgba($anti-main-color, 0.7), transparent 35%));
+			}
+
+
+			h1{
+				font-size: $wide-font;
+				letter-spacing: $wider-lttrspac;
+				font-family: $stretch-font;
+  				padding: 90px 30px 70px;
+  				line-height: $page_marge_limit;
+				text-align: center;
+				text-transform: capitalize;
+				//@include simple-text-border(1px, $anti-main-color);
+				color: $main-color;
+				background: bottom repeat-x;
+				background-size: 7px;
+				//background-image: image-url("ico/logopattern.png");
+				background-color: rgba($anti-main-color, 0.4);
+
+			}
+
+			.tags{
+				padding: 80px 100px;
+
+				h5{
+					display: inline-block;
+					background: $main-color;
+					padding: ($page_marge_limit)/2;
+					margin: ($page_marge_limit)/2;
+
+					font-size: 13px;
+					font-style: italic;
+					letter-spacing: 3px;
+
+				}
+
+			}
+		}
+
+
+		p{
+			background: $main-color;
+			padding: 80px 100px;
+			//margin-bottom: 100px;/*hauteur du .url*/
+
+			font-size: 14px;
+			line-height: 25px;
+			letter-spacing: 3px;
+			font-family: $stick-font;
+		}
+		a.url{
+			width: 100%;
+			height: 100px;
+			line-height: 100px;
+			font-family: $curved-font;
+			letter-spacing: $medium-lttrspac;
+			text-align: center;
+			font-size: 30px;
+			background: $anti-main-color;
+			color: $main-color;
+			display: block;
+			// position: absolute;
+			// bottom: 0;
+			background: bottom repeat-x;
+			background-size: 7px;
+			background-image: image-url("ico/logopattern.png");
+			@include transition (color, 0.4s);
+		}
+		a.url:hover{
+			//color: darken($color-projects, 10%);
+			color: $color-projects;
+		}
+	}
+}
+
+.project{
+	display: none;
+}
+
+.prevnext{
+	font-size: 23px;
+	width: 100%;
+	position: relative;
+
+	a{
+		margin: 20px 40px;
+		position: absolute;
+		@include transition (color, 0.4s);
+	}
+	a:hover, a.return:hover{
+		color: $color-projects;
+	}
+
+	.right{
+		right: 5px;
+	}	
+	.left{
+		left: 5px;
+	}
+
+	a.return{
+		color: $color-git;
+	}
+
+}
+
+///////////////////////////////
+
+////////	MEDIAQUERIES
+
+///////////////////////////////
+
+
+
+
+@media all and (min-width: $mobile-wide){
+
+	nav#projects_list{	
+
+		a{
+			height: ($proj-list-h)*1.5;
+		}
+
+	}
+
+}
+
+//// small DOUBLE COL BEHAV  ////
+
+
+@media all and (min-width: $tablette-wide){
+
+.fa-chevron-down{
+	opacity: 0!important;
+}
+
+nav#projects_list ul, #project_side{
+	padding-bottom: 1px;
+}
+
+	nav#projects_list{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 40%;
+		z-index: 2;
+	
+		li{
+		}
+		a{
+			
+		}
+
+	}
+
+	#project_content{
+		width: 60%;
+
+		.projet{
+			.projet_top{
+				h1{
+					padding: 70px 30px;
+				}
+			}
+			a.url{
+			margin-bottom: 60px;
+			
+			}
+		}
+	}
+
+	.prevnext{
+		display: none;
+		 //bottom: 60px;
+	}
+
+}

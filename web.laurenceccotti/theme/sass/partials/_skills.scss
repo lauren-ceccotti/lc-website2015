@@ -1,0 +1,418 @@
+//
+// Styles for skills layout
+// --------------------------------------------------
+
+
+.dot{
+	position: fixed;
+	bottom: 10px;
+	z-index: 2;
+	font-size: 23px;
+	cursor: pointer;
+}
+
+.dot.left{
+	left: 45px;
+	display: none;
+}
+.dot.right{
+	right: 45px;
+}
+
+.dot:hover{
+	color: $color-skills;
+	cursor: pointer;
+}
+
+
+
+
+
+.leftpage{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: $page_marge_limit; 
+	padding-top: ($page_marge_limit-wide+15);
+	//cause margin negatif sur bulles et overflow hidden page left
+}
+
+#skills{
+}
+
+.skill{
+	font-family: $geek-font;
+	text-transform: uppercase;
+	text-align: center;
+	color: $anti-main-color;
+	letter-spacing: 3px;
+	max-width: 200px;
+	max-height: 200px;
+	margin: -15px -10px;
+
+	float: left;
+	@include scale(0.1);
+
+	opacity: 0;
+
+	// display: inline-block;
+	// position: absolute;
+	// top: -50px;
+	// left: 45%;
+}
+
+.tera{
+	//@include skill-shape(5.6);
+	@include skill-shape;
+	font-size: 1em;
+	font-size: 2vh;
+	letter-spacing: 5px;
+}
+.giga{
+	//@include skill-shape(5);
+	@include skill-shape;
+	font-size: 1em;
+	font-size: 2vh;
+	letter-spacing: 5px;
+}
+.mega{
+	//@include skill-shape(4);
+	@include skill-shape;
+	font-size: 1em;
+	font-size: 1.7vh;
+
+}
+.kilo{
+	//@include skill-shape(3.5);
+	@include skill-shape;
+	font-size: 1em;
+	font-size: 1.7vh;
+
+}
+.hecto{
+	//@include skill-shape(3.2);
+	@include skill-shape;
+	font-size: 0.8em;
+	font-size: 1.4vh;
+}
+.deca{
+	//@include skill-shape(2.5);
+	@include skill-shape;
+	font-size: 0.8em;
+	font-size: 1.4vh;
+}
+
+
+.uxui{
+	background: rgba($color-ux, $skill-opacity);
+}
+.html5, .css3{
+	background: rgba($color-html, $skill-opacity);
+}
+.bootstrap, .compass{
+	background: rgba($color-cssfm, $skill-opacity);
+}
+.canvas, .svg{
+	background: rgba($color-canvas, $skill-opacity);
+}
+.drupal, .php, .mysql{
+	background: rgba($color-cms, $skill-opacity);
+}
+.javascript{
+	background: rgba($color-js, $skill-opacity);
+}
+.jquery{
+	background: rgba($color-jquery, $skill-opacity);
+}
+.raphael, .greensock, .pixi{
+	background: rgba($color-jsfm, $skill-opacity);
+}
+.processing{
+	background: rgba($color-processing, $skill-opacity);
+}
+.git{
+	background: rgba($color-git, $skill-opacity);
+}
+
+
+
+
+///////////////////////////////
+
+///////   RIGHT PAGE
+
+///////////////////////////////
+
+
+.rightpage{
+	position: absolute;
+	width: 100%;
+	max-height: 100%;//disable scroll
+	overflow: hidden; //disable scroll
+	z-index: 0;
+	padding: $page_marge_limit;
+	padding-top: ($page_marge_limit-wide + 5);
+	display: none;
+}
+
+#tools{
+	margin: auto;
+	max-width: 400px;
+}
+
+.tool{
+	overflow: hidden;
+	margin: auto;
+	text-transform: uppercase;
+	font-family: $stick-font;
+	font-size: $tool-font-size;
+	letter-spacing: $tool-lttrspac;
+	
+	h3, .stars{
+		height: ($tool-height - 5);
+		padding-top: 5px;
+		line-height: ($tool-height - 1);
+	}
+
+	h3{
+		float: left;
+		opacity: 0;
+	}
+	.stars{
+		float: right;
+		text-align: right;
+		font-size: ($tool-font-size + 2);
+		letter-spacing: $tool-lttrspac;
+		i{
+			opacity: 0;
+			@include transform (scale(0.1));
+		}
+		.low{
+			color: $unselected;
+		}
+	}
+}
+		
+	
+///////////////////////////////
+
+////////	lANGUES
+
+///////////////////////////////
+
+
+#langues{
+
+		//background: $test-color2;
+		margin: auto;
+		margin-top: 20px;
+		overflow: hidden;
+		opacity: 0;
+
+		.fr .mask .fill{
+			background-color: $color-circle-fr;
+		}
+		.en .mask .fill{
+			background-color: $color-circle-en;
+		}
+		.it .mask .fill{
+			background-color: $color-circle-it;
+		}
+
+
+	.lg{
+		overflow: hidden;
+		width: (100%/3);
+		float: left;
+		//background: $test-color1;
+		padding: $lg-padding 0;
+
+		h3{
+			padding-bottom: $lg-padding;
+			text-align: center;
+			text-transform: uppercase;
+			font-style: italic;
+			font-size: $lg-font-size;
+			letter-spacing: $lg-lttrspac;
+			font-family: $stick-font;
+			//opacity: O;
+		}
+
+		.langlevel{
+
+			@include radial_progress($circle-size-small, $circle-inset-size-small, $circle-line-height); 
+
+		}//lg-lvl
+
+	}//lg
+	
+}//#langues
+
+
+
+
+
+///////////////////////////////
+
+////////	MEDIAQUERIES
+
+///////////////////////////////
+
+
+
+//// larger SMALL BEHAV  ////
+
+@media all and (min-width: $mobile-wide){
+
+	.leftpage, .rightpage{
+		padding: $page_marge_limit-wide;
+	}
+	.leftpage, .rightpage{
+		padding-top: ($page_marge_limit-wide+15);
+	}
+
+	#tools{		
+		max-width: 545px;
+		margin: 0 auto 10%;
+
+	}
+	.tool{
+		letter-spacing: ($tool-lttrspac+1);
+		h3{
+		font-size: ($tool-font-size+5);
+		}	
+		.stars{
+			font-size: ($tool-font-size+10);
+			letter-spacing: ($tool-lttrspac+2);
+		}
+		h3, .stars{
+			height: ($tool-height+10);
+			line-height: ($tool-height+9);
+		}		
+	}
+
+	///////////
+
+	#langues{
+		.lg{
+			h3{
+				font-size: ($lg-font-size+2);
+				padding-bottom: ($lg-padding + 10);
+
+			}
+
+			.langlevel{
+				@include radial_progress($circle-size-wide, $circle-inset-size-wide, $circle-line-height); 
+			}
+		}
+
+	}
+
+}
+
+//// small DOUBLE COL BEHAV  ////
+
+@media all and (min-width: $tablette-wide){
+
+	.dot{
+		display: none;
+	}
+
+	.leftpage{
+		width: $half-size;
+		display: block!important;
+
+	}
+
+	.rightpage{
+		width: $half-size;
+		right: 0;
+		display: block!important;
+	}
+
+	///////////
+
+	.tool{
+		h3, .stars{
+			font-size: $tool-font-size;
+			letter-spacing: $tool-lttrspac;
+		}
+
+		h3{
+			float: left;
+		}
+		.stars{
+			float: right;
+			text-align: right;
+			font-size: ($tool-font-size + 2);
+			letter-spacing: $tool-lttrspac;
+
+			.low{
+				color: $unselected;
+			}
+		}
+	}
+
+	///////////
+
+	#langues{
+		.lg{
+			.langlevel{
+				@include radial_progress($circle-size-small, $circle-inset-size-small, $circle-line-height); 
+			}
+		}
+	}
+
+}
+
+//// wider DOUBLE COL BEHAV  ////
+
+@media all and (min-width: $screen-small){
+
+	.tool{
+		letter-spacing: $tool-lttrspac;
+		h3{
+			font-size: ($tool-font-size + 4);	
+		}	
+		.stars{
+			font-size: ($tool-font-size + 6);
+			letter-spacing: $tool-lttrspac;
+		}
+	}
+
+	///////////
+
+	#langues{
+		.lg{
+			.langlevel{
+				@include radial_progress($circle-size-wide, $circle-inset-size-wide, $circle-line-height); 
+			}
+		}
+	}
+
+
+}
+
+//// WIDE SCREENS BEHAV  ////
+
+@media all and (min-width: $screen-medium){
+
+	.tool{
+		letter-spacing: ($tool-lttrspac+1);
+		h3{
+		font-size: ($tool-font-size+5);
+		}	
+		.stars{
+			font-size: ($tool-font-size+10);
+			letter-spacing: ($tool-lttrspac+2);
+		}
+	}
+
+}
+
+
+		
+
+

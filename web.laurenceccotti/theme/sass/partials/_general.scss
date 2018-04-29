@@ -1,0 +1,46 @@
+//
+// Styles for main layout
+// --------------------------------------------------
+
+*{
+	@include box-sizing(border-box);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.error{
+	background: gray;
+	color: white;
+}
+.debug{
+	background: gray;
+	color: orange;
+}
+
+a{
+	color: $main-color;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover{
+	cursor: pointer;
+}
+body{
+	font-size: $full-size;
+	opacity: 0;
+	// overflow: hidden;
+}
+
+header{
+}
+
+
+#page{
+}
+#content{
+}
+
+footer{
+	clear: both;
+	text-align: center;
+}
+

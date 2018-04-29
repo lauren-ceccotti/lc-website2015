@@ -1,0 +1,86 @@
+//
+// Styles for main layout
+// --------------------------------------------------
+
+span.welcome{
+	opacity:0;
+}
+span.welcome::before{
+	content:"Welcome";
+    display: block;
+    overflow: hidden;
+    @include vertical-align(fixed);
+    width: 100%;
+    color: $unselected; 
+
+    font-family: $curved-font;
+	font-size: 6em;
+	font-size: 16vw;
+    letter-spacing: 10px;
+    text-align: center;
+
+	opacity:0;
+	@include animation(fadeIn_light ease-in 1);
+	@include animation-fill-mode(forwards);
+	@include animation-duration(1s);
+
+}
+
+.title{
+	font-family: $curved-font;
+	position: fixed;
+	z-index: 10;
+	text-align: center;
+	width: $full-size;
+	padding: 0 $page_marge_limit;
+	opacity: 0;
+	cursor: pointer;
+}
+.title:hover{
+	cursor: pointer;
+}
+
+h1.title{
+	bottom: 10px;
+	font-size: 1.9em;
+	letter-spacing: 0.1em;
+}
+h2.title{
+	top: 10px;
+	font-size: 2.5em;
+	letter-spacing: 0.12em;
+	height: 80%;
+}
+
+
+
+///////////////////////////////
+
+////////	MEDIAQUERIES
+
+///////////////////////////////
+
+
+
+//// larger SMALL BEHAV  ////
+
+@media all and (min-width: $mobile-wide){
+
+	span.welcome::before{
+		content:"Welcome, use the compass to navigate !";
+	}
+	h1.title{
+		bottom: 15px;
+		font-size: 3.2em;
+	}
+	h2.title{
+		top: 15px;
+		font-size: 4.6em;
+	}
+
+}
+
+		
+
+
+

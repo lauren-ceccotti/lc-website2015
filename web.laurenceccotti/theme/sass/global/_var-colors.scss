@@ -1,0 +1,61 @@
+//
+// Variables
+// --------------------------------------------------
+
+$path-images: theme/images;
+$path-project-link: $path-images/proj_link;
+// // Grays
+// // -------------------------
+
+// $gray-darker: lighten(#000, 13.5%) !default; // #222
+// $gray-dark: lighten(#000, 20%) !default;   // #333
+// $gray: lighten(#000, 33.5%) !default; // #555
+// $gray-light: lighten(#000, 60%) !default;   // #999
+// $gray-lighter: lighten(#000, 93.5%) !default; // #eee
+
+$test-color1: 		rgba(25, 45, 122, 0.4);
+$test-color2: 		rgba(250, 30, 100, 0.1);
+
+$main-color: 		#000;
+$anti-main-color: 	#FFF;
+
+$unselected: #d6dadc;
+
+$color-skills: 			rgb(218, 239, 24);
+$color-projects: 		rgb(10, 224, 229);
+$color-journey: 		rgb(255, 67, 92);
+$color-contact: 		rgb(148, 39, 244);
+
+
+/// SKILLS
+
+$skill-opacity: 	0.7;
+
+$color-ux: 			rgb(255, 131, 40);	//rgb(240, 145, 35);
+$color-html: 		$color-journey;  	//rgb(230, 75, 40);
+$color-cssfm: 		rgb(239, 21, 174);	//rgb(230, 35, 125);
+$color-canvas: 		$color-contact;  	//rgb(80, 65, 145);
+$color-cms: 		rgb(44, 178, 240);  	//rgb(80, 135, 200);
+$color-js: 			$color-skills;  	//rgb(130, 185, 40);
+$color-jquery: 		rgb(38, 231, 152); 	//rgb(65, 175, 130);
+$color-jsfm: 		rgb(69, 236, 16);	//rgb(80, 175, 50);
+$color-processing: 	$color-projects;  	//rgb(80, 190, 205);
+$color-git: 		rgb(125, 125, 125);
+
+/// langues
+$circle-transition-length: 1s;
+
+$lg-percnt-color: $main-color;
+$circle-inset-color: #fbfbfb; 
+$circle-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+
+$color-circle-fr: $color-cms;
+$color-circle-en: $color-cssfm;
+$color-circle-it: $color-js;
+
+
+
+//$text-color: $gray-dark !default;
+
+// Links
+// -------------------------

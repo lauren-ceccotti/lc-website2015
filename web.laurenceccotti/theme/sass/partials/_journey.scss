@@ -1,0 +1,182 @@
+
+//@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+.prev:hover, .next:hover{
+	cursor: pointer;
+}	//old browsers
+
+.prev, .next{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	z-index: 2;
+	display: none;
+	cursor: pointer;
+}
+
+.prev{
+	bottom: 0;
+}
+
+.rules{
+	position: fixed;
+	left: 0;
+	width: 50%;
+	text-align: right;
+	font-size: 20px;
+  	text-transform: uppercase;
+  	font-family: $geek-font;
+}
+
+.rules .fa{
+	margin: 15px;
+}
+.rules .fa-rotate-right{
+	@include rotate(200deg);
+}
+.forward{
+	top: 10%;
+	opacity: 0;
+}
+.backward{
+	bottom: 20%;
+	opacity: 0;
+}
+
+
+
+// .prev:hover{
+// 	cursor:image-url("ico/prev.png")40 55,image-url("ico/prev.cur") 40 55,auto;
+// }
+// .next:hover{
+// 	cursor:image-url("ico/next.png")40 55,image-url("ico/next.cur") 40 55,auto;
+// }
+
+#page_journey::before{
+	content:"Journey";
+	z-index: -1;
+    display: block;
+    overflow: hidden;
+    @include vertical-align(absolute);
+    width: 100%;
+    color: $unselected; 
+
+    font-family: $curved-font;
+	font-size: 7em;
+	font-size: 25vw;
+    letter-spacing: 10px;
+    text-align: center;
+
+	opacity:0;
+	@include animation(fadeIn_light ease-in 1);
+	@include animation-fill-mode(forwards);
+	@include animation-duration(1s);
+
+}
+
+
+
+.roue {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  img{
+	height: 100%;
+	position: absolute;
+	top: 10%;
+	left: 15%;
+  }
+
+}
+
+
+#page_journey{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: $stick-font;
+
+	.stage{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+
+	h1, h3{
+		padding: ($page_marge_limit+5);
+		font-size: 18px;
+		font-weight: bold;
+		letter-spacing: $medium-lttrspac;
+		text-align: left;
+		text-transform: capitalize;
+		//@include simple-text-border(1px, $anti-main-color);
+		color: $main-color;
+	}
+	h3{
+		position: absolute;
+		bottom: 0;
+		height: 75%;
+		width: 70%;
+		text-align: center;	
+	}
+
+	p{
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		height: 50%;
+		padding-left: $page_marge_limit;
+		text-align: right;
+		font-size: 16px;
+		// line-height: 25px;
+		letter-spacing: 1px;
+		font-weight: normal;
+	}
+
+}
+
+
+
+///////////////////////////////
+
+////////	MEDIAQUERIES
+
+///////////////////////////////
+
+
+
+
+@media all and (min-width: $mobile-wide){
+	#page_journey{
+		h1, h3{
+			font-size: 26px;
+		}
+	}
+}
+
+//// small DOUBLE COL BEHAV  ////
+
+
+@media all and (min-width: $screen-small){
+
+//desktop
+	.prev:hover{
+	cursor: sw-resize;
+	}
+	.next:hover{
+		cursor: ne-resize;
+	}
+}
+
+
+
+
+

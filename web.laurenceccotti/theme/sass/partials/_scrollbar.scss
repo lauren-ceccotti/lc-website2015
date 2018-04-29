@@ -1,0 +1,34 @@
+.mCSB_inside > .mCSB_container{
+	margin: 0;
+}
+
+// .mCS-dark.mCSB_scrollTools .mCSB_draggerRail{
+// 	background-color: rgba($anti-main-color, 0.5);
+// }
+
+.mCSB_scrollTools{
+	margin: 5px 0 10px 0;
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-color: rgba($color-projects, 0.6);
+}
+
+// .mCS-dark-thin.mCSB_scrollTools.mCSB_dragger_onDrag .mCSB_dragger_bar,
+// .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{
+// }
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ 
+	background-color: rgba($color-projects, 1);
+
+}
+
+.mCSB_dragger_bar{
+	cursor: pointer;
+}
+.mCSB_dragger_bar:hover{
+	cursor: pointer;
+}
+//ns-resize

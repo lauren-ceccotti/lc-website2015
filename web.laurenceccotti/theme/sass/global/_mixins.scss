@@ -1,0 +1,141 @@
+//
+// SASS Mixins
+// --------------------------------------------------
+
+@import "compass";
+//@import "compass/css3";
+
+
+//--------------------------------------------------
+//  ANIMATIONS
+/*--------------------------------------------------
+
+*/
+
+@include keyframes(fadeIn) {
+  from { opacity:0; } to { opacity:1; };
+}
+@include keyframes(fadeIn_light) {
+  from { opacity:0; } to { opacity:0.4; };
+}
+
+/*
+//--------------------------------------------------
+//  Custom Mixins
+/*--------------------------------------------------
+*/
+
+@mixin simple-text-border($size, $color) {
+  @include text-shadow(
+    (-$size) 0 0 $color, 
+    $size 0 0 $color,
+    0 $size 0 $color,
+    0 (-$size) 0 $color);
+}
+
+@mixin width-size($nb_col) {
+	width: 100% / 12 * $nb_col;
+}
+@mixin height-size($nb_col) {
+	height: 6em * $nb_col;
+}
+
+$max-skills-sizes: 6;
+$max-skills-width: 42%;
+
+
+@mixin skill-shape {
+  @include border-radius(55%); 
+}
+
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+@mixin radial_progress($circle-size, $circle-inset-size, $circle-line-height) {
+
+      .radial_progress {
+
+        margin: auto;
+        width:  $circle-size;
+        height: $circle-size;
+
+        background-color: $unselected;
+        border-radius: $half-size;
+        
+        .circle {
+          
+          .mask, .fill, .shadow {
+            width:    $circle-size;
+            height:   $circle-size;
+            position: absolute;
+            border-radius: $half-size;
+          }
+          .shadow {
+            box-shadow: $circle-shadow inset;
+          }
+          
+          .mask, .fill {
+            -webkit-backface-visibility: hidden;
+            border-radius: $half-size;
+          }
+          
+          .mask {
+            clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+            .fill {
+              clip: rect(0px, $circle-size/2, $circle-size, 0px);
+              //background-color: $circle-color;
+            }
+          }
+        }
+        
+        .inset {
+          width:       $circle-inset-size;
+          height:      $circle-inset-size;
+          position:    absolute;
+          margin-left: ($circle-size - $circle-inset-size)/2;
+          margin-top:  ($circle-size - $circle-inset-size)/2;
+
+          background-color: $circle-inset-color;
+          border-radius: $half-size;
+          box-shadow: $circle-shadow;
+          .percentage {
+            height:   $lg-percnt-font-size;
+            width:    $lg-percnt-text-width;
+            overflow: hidden;
+
+            position: absolute;
+            top:      ($circle-inset-size - $lg-percnt-font-size) / 2;
+            left:     ($circle-inset-size - $lg-percnt-text-width) / 2;
+
+            line-height: 1;
+            .numbers {
+              margin-top: -$lg-percnt-font-size;
+              transition: width $circle-transition-length;
+              span {
+                opacity: 0;
+                width:          $lg-percnt-text-width;
+                display:        inline-block;
+                text-align:     center;
+                font-size:      ($lg-font-size+ 2);
+                line-height:    $circle-line-height;
+                letter-spacing: ($lg-lttrspac+ 1);
+                font-family:    $stick-font;
+                color:          $lg-percnt-color;
+                text-indent:  3px;
+              }
+            }
+          }
+        }
+      } //rdial prgrss
+}
+
+
+
+

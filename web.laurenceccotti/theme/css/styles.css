@@ -1,0 +1,1931 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*--------------------------------------------------
+
+*/
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn_light {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@-webkit-keyframes fadeIn_light {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@keyframes fadeIn_light {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+/*
+//--------------------------------------------------
+//  Custom Mixins
+/*--------------------------------------------------
+*/
+@font-face {
+  font-family: "Lighthouse";
+  src: url('../fonts/Lighthouse/Lighthouse.eot?1423497138');
+  src: url('../fonts/Lighthouse/Lighthouse.eot?&1423497138#iefix') format('embedded-opentype'), url('../fonts/Lighthouse/Lighthouse.woff?1423497138') format('woff'), url('../fonts/Lighthouse/Lighthouse.ttf?1366109940') format('truetype'), url('../fonts/Lighthouse/Lighthouse.svg?1423497138') format('svg');
+}
+/* line 5, ../sass/partials/_general.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 10, ../sass/partials/_general.scss */
+.error {
+  background: gray;
+  color: white;
+}
+
+/* line 14, ../sass/partials/_general.scss */
+.debug {
+  background: gray;
+  color: orange;
+}
+
+/* line 19, ../sass/partials/_general.scss */
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 24, ../sass/partials/_general.scss */
+a:hover {
+  cursor: pointer;
+}
+
+/* line 27, ../sass/partials/_general.scss */
+body {
+  font-size: 100%;
+  opacity: 0;
+}
+
+/* line 42, ../sass/partials/_general.scss */
+footer {
+  clear: both;
+  text-align: center;
+}
+
+/* line 5, ../sass/partials/_home.scss */
+span.welcome {
+  opacity: 0;
+}
+
+/* line 8, ../sass/partials/_home.scss */
+span.welcome::before {
+  content: "Welcome";
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  color: #d6dadc;
+  font-family: "Lighthouse";
+  font-size: 6em;
+  font-size: 16vw;
+  letter-spacing: 10px;
+  text-align: center;
+  opacity: 0;
+  -moz-animation: fadeIn_light ease-in 1;
+  -webkit-animation: fadeIn_light ease-in 1;
+  animation: fadeIn_light ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* line 29, ../sass/partials/_home.scss */
+.title {
+  font-family: "Lighthouse";
+  position: fixed;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  padding: 0 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* line 39, ../sass/partials/_home.scss */
+.title:hover {
+  cursor: pointer;
+}
+
+/* line 43, ../sass/partials/_home.scss */
+h1.title {
+  bottom: 10px;
+  font-size: 1.9em;
+  letter-spacing: 0.1em;
+}
+
+/* line 48, ../sass/partials/_home.scss */
+h2.title {
+  top: 10px;
+  font-size: 2.5em;
+  letter-spacing: 0.12em;
+  height: 80%;
+}
+
+@media all and (min-width: 520px) {
+  /* line 69, ../sass/partials/_home.scss */
+  span.welcome::before {
+    content: "Welcome, use the compass to navigate !";
+  }
+
+  /* line 72, ../sass/partials/_home.scss */
+  h1.title {
+    bottom: 15px;
+    font-size: 3.2em;
+  }
+
+  /* line 76, ../sass/partials/_home.scss */
+  h2.title {
+    top: 15px;
+    font-size: 4.6em;
+  }
+}
+/* line 7, ../sass/partials/_menus.scss */
+.logo img {
+  z-index: 9;
+  width: 200px;
+  position: fixed;
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  background: transparent;
+  cursor: pointer;
+}
+/* line 17, ../sass/partials/_menus.scss */
+.logo img:hover {
+  cursor: pointer;
+}
+/* line 22, ../sass/partials/_menus.scss */
+.logo img.menumini:hover {
+  cursor: pointer;
+}
+
+/* line 31, ../sass/partials/_menus.scss */
+#zone_menu {
+  position: relative;
+  z-index: 2;
+}
+/* line 36, ../sass/partials/_menus.scss */
+#zone_menu nav {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  opacity: 0;
+}
+/* line 45, ../sass/partials/_menus.scss */
+#zone_menu nav a {
+  position: relative;
+  display: block;
+  float: left;
+  font-family: "Lighthouse";
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  padding: 0 30px;
+  z-index: 8;
+  text-shadow: -1px 0 0 #FFF, 1px 0 0 #FFF, 0 1px 0 #FFF, 0 -1px 0 #FFF;
+}
+/* line 59, ../sass/partials/_menus.scss */
+#zone_menu nav .nav-skills a:hover {
+  color: #daef18;
+}
+/* line 62, ../sass/partials/_menus.scss */
+#zone_menu nav .nav-projects a:hover {
+  color: #0ae0e5;
+}
+/* line 65, ../sass/partials/_menus.scss */
+#zone_menu nav .nav-journey a:hover {
+  color: #ff435c;
+}
+/* line 68, ../sass/partials/_menus.scss */
+#zone_menu nav .nav-contact a:hover {
+  color: #9427f4;
+}
+/* line 72, ../sass/partials/_menus.scss */
+#zone_menu nav li:nth-child(odd) {
+  text-align: left;
+}
+/* line 75, ../sass/partials/_menus.scss */
+#zone_menu nav li:nth-child(even) {
+  text-align: right;
+}
+
+@media all and (min-width: 520px) {
+  /* line 92, ../sass/partials/_menus.scss */
+  .logo img {
+    width: 250px;
+  }
+
+  /* line 97, ../sass/partials/_menus.scss */
+  #zone_menu nav a {
+    font-size: 3.3em;
+    font-size: 5.4vh;
+  }
+}
+@media all and (min-width: 639px) {
+  /* line 104, ../sass/partials/_menus.scss */
+  .logo img {
+    width: 300px;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 111, ../sass/partials/_menus.scss */
+  .logo img {
+    width: 350px;
+  }
+}
+@media all and (min-width: 930px) {
+  /* line 118, ../sass/partials/_menus.scss */
+  .logo img {
+    width: 400px;
+  }
+}
+/* line 6, ../sass/partials/_skills.scss */
+.dot {
+  position: fixed;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+/* line 14, ../sass/partials/_skills.scss */
+.dot.left {
+  left: 45px;
+  display: none;
+}
+
+/* line 18, ../sass/partials/_skills.scss */
+.dot.right {
+  right: 45px;
+}
+
+/* line 22, ../sass/partials/_skills.scss */
+.dot:hover {
+  color: #daef18;
+  cursor: pointer;
+}
+
+/* line 31, ../sass/partials/_skills.scss */
+.leftpage {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  padding-top: 55px;
+}
+
+/* line 45, ../sass/partials/_skills.scss */
+.skill {
+  font-family: "Anonymous Pro";
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  letter-spacing: 3px;
+  max-width: 200px;
+  max-height: 200px;
+  margin: -15px -10px;
+  float: left;
+  -moz-transform: scale(0.1, 0.1);
+  -ms-transform: scale(0.1, 0.1);
+  -webkit-transform: scale(0.1, 0.1);
+  transform: scale(0.1, 0.1);
+  opacity: 0;
+}
+
+/* line 66, ../sass/partials/_skills.scss */
+.tera {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 1em;
+  font-size: 2vh;
+  letter-spacing: 5px;
+}
+
+/* line 73, ../sass/partials/_skills.scss */
+.giga {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 1em;
+  font-size: 2vh;
+  letter-spacing: 5px;
+}
+
+/* line 80, ../sass/partials/_skills.scss */
+.mega {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 1em;
+  font-size: 1.7vh;
+}
+
+/* line 87, ../sass/partials/_skills.scss */
+.kilo {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 1em;
+  font-size: 1.7vh;
+}
+
+/* line 94, ../sass/partials/_skills.scss */
+.hecto {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 0.8em;
+  font-size: 1.4vh;
+}
+
+/* line 100, ../sass/partials/_skills.scss */
+.deca {
+  -moz-border-radius: 55%;
+  -webkit-border-radius: 55%;
+  border-radius: 55%;
+  font-size: 0.8em;
+  font-size: 1.4vh;
+}
+
+/* line 108, ../sass/partials/_skills.scss */
+.uxui {
+  background: rgba(255, 131, 40, 0.7);
+}
+
+/* line 111, ../sass/partials/_skills.scss */
+.html5, .css3 {
+  background: rgba(255, 67, 92, 0.7);
+}
+
+/* line 114, ../sass/partials/_skills.scss */
+.bootstrap, .compass {
+  background: rgba(239, 21, 174, 0.7);
+}
+
+/* line 117, ../sass/partials/_skills.scss */
+.canvas, .svg {
+  background: rgba(148, 39, 244, 0.7);
+}
+
+/* line 120, ../sass/partials/_skills.scss */
+.drupal, .php, .mysql {
+  background: rgba(44, 178, 240, 0.7);
+}
+
+/* line 123, ../sass/partials/_skills.scss */
+.javascript {
+  background: rgba(218, 239, 24, 0.7);
+}
+
+/* line 126, ../sass/partials/_skills.scss */
+.jquery {
+  background: rgba(38, 231, 152, 0.7);
+}
+
+/* line 129, ../sass/partials/_skills.scss */
+.raphael, .greensock, .pixi {
+  background: rgba(69, 236, 16, 0.7);
+}
+
+/* line 132, ../sass/partials/_skills.scss */
+.processing {
+  background: rgba(10, 224, 229, 0.7);
+}
+
+/* line 135, ../sass/partials/_skills.scss */
+.git {
+  background: rgba(125, 125, 125, 0.7);
+}
+
+/* line 149, ../sass/partials/_skills.scss */
+.rightpage {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  padding: 30px;
+  padding-top: 45px;
+  display: none;
+}
+
+/* line 160, ../sass/partials/_skills.scss */
+#tools {
+  margin: auto;
+  max-width: 400px;
+}
+
+/* line 165, ../sass/partials/_skills.scss */
+.tool {
+  overflow: hidden;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+/* line 173, ../sass/partials/_skills.scss */
+.tool h3, .tool .stars {
+  height: 35px;
+  padding-top: 5px;
+  line-height: 39px;
+}
+/* line 179, ../sass/partials/_skills.scss */
+.tool h3 {
+  float: left;
+  opacity: 0;
+}
+/* line 183, ../sass/partials/_skills.scss */
+.tool .stars {
+  float: right;
+  text-align: right;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+/* line 188, ../sass/partials/_skills.scss */
+.tool .stars i {
+  opacity: 0;
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+}
+/* line 192, ../sass/partials/_skills.scss */
+.tool .stars .low {
+  color: #d6dadc;
+}
+
+/* line 206, ../sass/partials/_skills.scss */
+#langues {
+  margin: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  opacity: 0;
+}
+/* line 214, ../sass/partials/_skills.scss */
+#langues .fr .mask .fill {
+  background-color: #2cb2f0;
+}
+/* line 217, ../sass/partials/_skills.scss */
+#langues .en .mask .fill {
+  background-color: #ef15ae;
+}
+/* line 220, ../sass/partials/_skills.scss */
+#langues .it .mask .fill {
+  background-color: #daef18;
+}
+/* line 225, ../sass/partials/_skills.scss */
+#langues .lg {
+  overflow: hidden;
+  width: 33.33333%;
+  float: left;
+  padding: 15px 0;
+}
+/* line 232, ../sass/partials/_skills.scss */
+#langues .lg h3 {
+  padding-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Josefin Sans";
+}
+/* line 63, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress {
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  background-color: #d6dadc;
+  border-radius: 50%;
+}
+/* line 74, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill, #langues .lg .langlevel .radial_progress .circle .shadow {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  border-radius: 50%;
+}
+/* line 80, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .circle .shadow {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+}
+/* line 84, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill {
+  -webkit-backface-visibility: hidden;
+  border-radius: 50%;
+}
+/* line 89, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .circle .mask {
+  clip: rect(0px, 72px, 72px, 36px);
+}
+/* line 91, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .circle .mask .fill {
+  clip: rect(0px, 36px, 72px, 0px);
+}
+/* line 98, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .inset {
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  margin-left: 9px;
+  margin-top: 9px;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+/* line 108, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .inset .percentage {
+  height: 22px;
+  width: 57px;
+  overflow: hidden;
+  position: absolute;
+  top: 16px;
+  left: -1.5px;
+  line-height: 1;
+}
+/* line 118, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .inset .percentage .numbers {
+  margin-top: -22px;
+  transition: width 1s;
+}
+/* line 121, ../sass/global/_mixins.scss */
+#langues .lg .langlevel .radial_progress .inset .percentage .numbers span {
+  opacity: 0;
+  width: 57px;
+  display: inline-block;
+  text-align: center;
+  font-size: 17px;
+  line-height: 70px;
+  letter-spacing: 2px;
+  font-family: "Josefin Sans";
+  color: #000;
+  text-indent: 3px;
+}
+
+@media all and (min-width: 520px) {
+  /* line 269, ../sass/partials/_skills.scss */
+  .leftpage, .rightpage {
+    padding: 40px;
+  }
+
+  /* line 272, ../sass/partials/_skills.scss */
+  .leftpage, .rightpage {
+    padding-top: 55px;
+  }
+
+  /* line 276, ../sass/partials/_skills.scss */
+  #tools {
+    max-width: 545px;
+    margin: 0 auto 10%;
+  }
+
+  /* line 281, ../sass/partials/_skills.scss */
+  .tool {
+    letter-spacing: 4px;
+  }
+  /* line 283, ../sass/partials/_skills.scss */
+  .tool h3 {
+    font-size: 18px;
+  }
+  /* line 286, ../sass/partials/_skills.scss */
+  .tool .stars {
+    font-size: 23px;
+    letter-spacing: 5px;
+  }
+  /* line 290, ../sass/partials/_skills.scss */
+  .tool h3, .tool .stars {
+    height: 50px;
+    line-height: 49px;
+  }
+
+  /* line 300, ../sass/partials/_skills.scss */
+  #langues .lg h3 {
+    font-size: 17px;
+    padding-bottom: 25px;
+  }
+  /* line 63, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress {
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    background-color: #d6dadc;
+    border-radius: 50%;
+  }
+  /* line 74, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill, #langues .lg .langlevel .radial_progress .circle .shadow {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  /* line 80, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .shadow {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+  }
+  /* line 84, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill {
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+  }
+  /* line 89, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask {
+    clip: rect(0px, 120px, 120px, 60px);
+  }
+  /* line 91, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask .fill {
+    clip: rect(0px, 60px, 120px, 0px);
+  }
+  /* line 98, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* line 108, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage {
+    height: 22px;
+    width: 57px;
+    overflow: hidden;
+    position: absolute;
+    top: 34px;
+    left: 16.5px;
+    line-height: 1;
+  }
+  /* line 118, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers {
+    margin-top: -22px;
+    transition: width 1s;
+  }
+  /* line 121, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers span {
+    opacity: 0;
+    width: 57px;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    line-height: 70px;
+    letter-spacing: 2px;
+    font-family: "Josefin Sans";
+    color: #000;
+    text-indent: 3px;
+  }
+}
+@media all and (min-width: 769px) {
+  /* line 319, ../sass/partials/_skills.scss */
+  .dot {
+    display: none;
+  }
+
+  /* line 323, ../sass/partials/_skills.scss */
+  .leftpage {
+    width: 50%;
+    display: block !important;
+  }
+
+  /* line 329, ../sass/partials/_skills.scss */
+  .rightpage {
+    width: 50%;
+    right: 0;
+    display: block !important;
+  }
+
+  /* line 338, ../sass/partials/_skills.scss */
+  .tool h3, .tool .stars {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+  /* line 343, ../sass/partials/_skills.scss */
+  .tool h3 {
+    float: left;
+  }
+  /* line 346, ../sass/partials/_skills.scss */
+  .tool .stars {
+    float: right;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+  /* line 352, ../sass/partials/_skills.scss */
+  .tool .stars .low {
+    color: #d6dadc;
+  }
+
+  /* line 63, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress {
+    margin: auto;
+    width: 72px;
+    height: 72px;
+    background-color: #d6dadc;
+    border-radius: 50%;
+  }
+  /* line 74, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill, #langues .lg .langlevel .radial_progress .circle .shadow {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  /* line 80, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .shadow {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+  }
+  /* line 84, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill {
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+  }
+  /* line 89, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask {
+    clip: rect(0px, 72px, 72px, 36px);
+  }
+  /* line 91, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask .fill {
+    clip: rect(0px, 36px, 72px, 0px);
+  }
+  /* line 98, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    margin-left: 9px;
+    margin-top: 9px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* line 108, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage {
+    height: 22px;
+    width: 57px;
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    left: -1.5px;
+    line-height: 1;
+  }
+  /* line 118, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers {
+    margin-top: -22px;
+    transition: width 1s;
+  }
+  /* line 121, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers span {
+    opacity: 0;
+    width: 57px;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    line-height: 70px;
+    letter-spacing: 2px;
+    font-family: "Josefin Sans";
+    color: #000;
+    text-indent: 3px;
+  }
+}
+@media all and (min-width: 930px) {
+  /* line 374, ../sass/partials/_skills.scss */
+  .tool {
+    letter-spacing: 3px;
+  }
+  /* line 376, ../sass/partials/_skills.scss */
+  .tool h3 {
+    font-size: 17px;
+  }
+  /* line 379, ../sass/partials/_skills.scss */
+  .tool .stars {
+    font-size: 19px;
+    letter-spacing: 3px;
+  }
+
+  /* line 63, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress {
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    background-color: #d6dadc;
+    border-radius: 50%;
+  }
+  /* line 74, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill, #langues .lg .langlevel .radial_progress .circle .shadow {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  /* line 80, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .shadow {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+  }
+  /* line 84, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask, #langues .lg .langlevel .radial_progress .circle .fill {
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+  }
+  /* line 89, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask {
+    clip: rect(0px, 120px, 120px, 60px);
+  }
+  /* line 91, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .circle .mask .fill {
+    clip: rect(0px, 60px, 120px, 0px);
+  }
+  /* line 98, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* line 108, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage {
+    height: 22px;
+    width: 57px;
+    overflow: hidden;
+    position: absolute;
+    top: 34px;
+    left: 16.5px;
+    line-height: 1;
+  }
+  /* line 118, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers {
+    margin-top: -22px;
+    transition: width 1s;
+  }
+  /* line 121, ../sass/global/_mixins.scss */
+  #langues .lg .langlevel .radial_progress .inset .percentage .numbers span {
+    opacity: 0;
+    width: 57px;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    line-height: 70px;
+    letter-spacing: 2px;
+    font-family: "Josefin Sans";
+    color: #000;
+    text-indent: 3px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 402, ../sass/partials/_skills.scss */
+  .tool {
+    letter-spacing: 4px;
+  }
+  /* line 404, ../sass/partials/_skills.scss */
+  .tool h3 {
+    font-size: 18px;
+  }
+  /* line 407, ../sass/partials/_skills.scss */
+  .tool .stars {
+    font-size: 23px;
+    letter-spacing: 5px;
+  }
+}
+/* line 3, ../sass/partials/_projects.scss */
+.fa-chevron-down {
+  position: absolute;
+  z-index: 2;
+  font-size: 1.3em;
+  top: 0;
+  line-height: normal;
+  background: #000;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 3px;
+  opacity: 0;
+  -moz-transition: color, 0.4s;
+  -o-transition: color, 0.4s;
+  -webkit-transition: color, 0.4s;
+  transition: color, 0.4s;
+  cursor: pointer;
+}
+
+/* line 20, ../sass/partials/_projects.scss */
+.fa-chevron-down:hover {
+  cursor: pointer;
+  color: #0ae0e5;
+}
+
+/* line 29, ../sass/partials/_projects.scss */
+nav#projects_list ul, #project_side {
+  padding-bottom: 65px;
+}
+
+/* line 33, ../sass/partials/_projects.scss */
+nav#projects_list {
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #d6dadc;
+}
+/* line 43, ../sass/partials/_projects.scss */
+nav#projects_list li {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  max-width: 768px;
+  display: table;
+  width: 100%;
+  opacity: 0;
+}
+/* line 54, ../sass/partials/_projects.scss */
+nav#projects_list li.mosaique {
+  background-image: url('../images/proj_link/mosaique.jpg?1425592229');
+}
+/* line 58, ../sass/partials/_projects.scss */
+nav#projects_list li.spaceodyssey {
+  background-image: url('../images/proj_link/spaceodyssey.jpg?1425579970');
+}
+/* line 61, ../sass/partials/_projects.scss */
+nav#projects_list li.helenkeller {
+  background-image: url('../images/proj_link/helenkeller.jpg?1425584991');
+}
+/* line 64, ../sass/partials/_projects.scss */
+nav#projects_list li.lecomptoir {
+  background-image: url('../images/proj_link/lecomptoir.jpg?1426088601');
+}
+/* line 67, ../sass/partials/_projects.scss */
+nav#projects_list li.lokisalle {
+  background-image: url('../images/proj_link/lokisalle.jpg?1425587203');
+}
+/* line 70, ../sass/partials/_projects.scss */
+nav#projects_list li.laurenceccotti {
+  background-image: url('../images/proj_link/laurenceccotti.jpg?1425585646');
+}
+/* line 73, ../sass/partials/_projects.scss */
+nav#projects_list li.noteon {
+  background-image: url('../images/proj_link/noteon.jpg?1425592903');
+}
+/* line 76, ../sass/partials/_projects.scss */
+nav#projects_list li.aaaf {
+  background-image: url('../images/proj_link/aaaf.jpg?1425579796');
+}
+/* line 79, ../sass/partials/_projects.scss */
+nav#projects_list li.ffa {
+  background-image: url('../images/proj_link/ffa.jpg?1425581630');
+}
+/* line 82, ../sass/partials/_projects.scss */
+nav#projects_list li.prs {
+  background-image: url('../images/proj_link/prs.jpg?1426088077');
+}
+/* line 85, ../sass/partials/_projects.scss */
+nav#projects_list li.massaud {
+  background-image: url('../images/proj_link/massaud.jpg?1426091593');
+}
+/* line 88, ../sass/partials/_projects.scss */
+nav#projects_list li.metzgerboucherie {
+  background-image: url('../images/proj_link/metzgerboucherie.jpg?1426088137');
+}
+/* line 91, ../sass/partials/_projects.scss */
+nav#projects_list li.metzgercorp {
+  background-image: url('../images/proj_link/metzgercorp.jpg?1426088117');
+}
+/* line 94, ../sass/partials/_projects.scss */
+nav#projects_list li.fusebox {
+  background-image: url('../images/proj_link/fusebox.jpg?1426092621');
+}
+/* line 97, ../sass/partials/_projects.scss */
+nav#projects_list li.sophiebellot {
+  background-image: url('../images/proj_link/sophiebellot.jpg?1290095174');
+}
+/* line 102, ../sass/partials/_projects.scss */
+nav#projects_list a {
+  display: table-cell;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0 35px;
+  color: #000;
+  font-family: "Josefin Sans";
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-align: center;
+  text-transform: capitalize;
+  vertical-align: middle;
+  line-height: 25px;
+  border-bottom: 1px solid #d6dadc;
+  -moz-transition: background, color, border, 0.4s;
+  -o-transition: background, color, border, 0.4s;
+  -webkit-transition: background, color, border, 0.4s;
+  transition: background, color, border, 0.4s;
+  cursor: pointer;
+}
+/* line 122, ../sass/partials/_projects.scss */
+nav#projects_list a:hover, nav#projects_list a.active {
+  background: rgba(0, 0, 0, 0.2);
+  color: #FFF;
+  border-bottom: 1px solid #0ae0e5;
+  cursor: pointer;
+}
+
+/* line 138, ../sass/partials/_projects.scss */
+#project_content::before {
+  content: "Projects";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  color: #d6dadc;
+  font-family: "Lighthouse";
+  font-size: 8.5em;
+  font-size: 17.5vw;
+  letter-spacing: 10px;
+  text-align: center;
+  opacity: 0;
+  -moz-animation: fadeIn_light ease-in 1;
+  -webkit-animation: fadeIn_light ease-in 1;
+  animation: fadeIn_light ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* line 159, ../sass/partials/_projects.scss */
+#project_content {
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+/* line 172, ../sass/partials/_projects.scss */
+#project_content .projet {
+  color: #FFF;
+  font-family: "Anonymous Pro";
+  position: relative;
+  min-height: 100%;
+}
+/* line 179, ../sass/partials/_projects.scss */
+#project_content .projet .projet_top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* line 191, ../sass/partials/_projects.scss */
+#project_content .projet .projet_top h1 {
+  font-size: 30px;
+  letter-spacing: 6px;
+  font-family: "Roboto Condensed";
+  padding: 90px 30px 70px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+  background: bottom repeat-x;
+  background-size: 7px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* line 208, ../sass/partials/_projects.scss */
+#project_content .projet .projet_top .tags {
+  padding: 80px 100px;
+}
+/* line 211, ../sass/partials/_projects.scss */
+#project_content .projet .projet_top .tags h5 {
+  display: inline-block;
+  background: #000;
+  padding: 15px;
+  margin: 15px;
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+/* line 227, ../sass/partials/_projects.scss */
+#project_content .projet p {
+  background: #000;
+  padding: 80px 100px;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  font-family: "Josefin Sans";
+}
+/* line 237, ../sass/partials/_projects.scss */
+#project_content .projet a.url {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  font-family: "Lighthouse";
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 30px;
+  background: #FFF;
+  color: #000;
+  display: block;
+  background: bottom repeat-x;
+  background-size: 7px;
+  background-image: url('../images/ico/logopattern.png?1430152837');
+  -moz-transition: color, 0.4s;
+  -o-transition: color, 0.4s;
+  -webkit-transition: color, 0.4s;
+  transition: color, 0.4s;
+}
+/* line 255, ../sass/partials/_projects.scss */
+#project_content .projet a.url:hover {
+  color: #0ae0e5;
+}
+
+/* line 262, ../sass/partials/_projects.scss */
+.project {
+  display: none;
+}
+
+/* line 266, ../sass/partials/_projects.scss */
+.prevnext {
+  font-size: 23px;
+  width: 100%;
+  position: relative;
+}
+/* line 271, ../sass/partials/_projects.scss */
+.prevnext a {
+  margin: 20px 40px;
+  position: absolute;
+  -moz-transition: color, 0.4s;
+  -o-transition: color, 0.4s;
+  -webkit-transition: color, 0.4s;
+  transition: color, 0.4s;
+}
+/* line 276, ../sass/partials/_projects.scss */
+.prevnext a:hover, .prevnext a.return:hover {
+  color: #0ae0e5;
+}
+/* line 280, ../sass/partials/_projects.scss */
+.prevnext .right {
+  right: 5px;
+}
+/* line 283, ../sass/partials/_projects.scss */
+.prevnext .left {
+  left: 5px;
+}
+/* line 287, ../sass/partials/_projects.scss */
+.prevnext a.return {
+  color: #7d7d7d;
+}
+
+@media all and (min-width: 520px) {
+  /* line 306, ../sass/partials/_projects.scss */
+  nav#projects_list a {
+    height: 150px;
+  }
+}
+@media all and (min-width: 769px) {
+  /* line 319, ../sass/partials/_projects.scss */
+  .fa-chevron-down {
+    opacity: 0 !important;
+  }
+
+  /* line 323, ../sass/partials/_projects.scss */
+  nav#projects_list ul, #project_side {
+    padding-bottom: 1px;
+  }
+
+  /* line 327, ../sass/partials/_projects.scss */
+  nav#projects_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    z-index: 2;
+  }
+
+  /* line 342, ../sass/partials/_projects.scss */
+  #project_content {
+    width: 60%;
+  }
+  /* line 347, ../sass/partials/_projects.scss */
+  #project_content .projet .projet_top h1 {
+    padding: 70px 30px;
+  }
+  /* line 351, ../sass/partials/_projects.scss */
+  #project_content .projet a.url {
+    margin-bottom: 60px;
+  }
+
+  /* line 358, ../sass/partials/_projects.scss */
+  .prevnext {
+    display: none;
+  }
+}
+/* line 5, ../sass/partials/_journey.scss */
+.prev:hover, .next:hover {
+  cursor: pointer;
+}
+
+/* line 9, ../sass/partials/_journey.scss */
+.prev, .next {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 19, ../sass/partials/_journey.scss */
+.prev {
+  bottom: 0;
+}
+
+/* line 23, ../sass/partials/_journey.scss */
+.rules {
+  position: fixed;
+  left: 0;
+  width: 50%;
+  text-align: right;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Anonymous Pro";
+}
+
+/* line 33, ../sass/partials/_journey.scss */
+.rules .fa {
+  margin: 15px;
+}
+
+/* line 36, ../sass/partials/_journey.scss */
+.rules .fa-rotate-right {
+  -moz-transform: rotate(200deg);
+  -ms-transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+
+/* line 39, ../sass/partials/_journey.scss */
+.forward {
+  top: 10%;
+  opacity: 0;
+}
+
+/* line 43, ../sass/partials/_journey.scss */
+.backward {
+  bottom: 20%;
+  opacity: 0;
+}
+
+/* line 57, ../sass/partials/_journey.scss */
+#page_journey::before {
+  content: "Journey";
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  color: #d6dadc;
+  font-family: "Lighthouse";
+  font-size: 7em;
+  font-size: 25vw;
+  letter-spacing: 10px;
+  text-align: center;
+  opacity: 0;
+  -moz-animation: fadeIn_light ease-in 1;
+  -webkit-animation: fadeIn_light ease-in 1;
+  animation: fadeIn_light ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* line 81, ../sass/partials/_journey.scss */
+.roue {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+/* line 89, ../sass/partials/_journey.scss */
+.roue img {
+  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+
+/* line 99, ../sass/partials/_journey.scss */
+#page_journey {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans";
+}
+/* line 105, ../sass/partials/_journey.scss */
+#page_journey .stage {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+/* line 113, ../sass/partials/_journey.scss */
+#page_journey h1, #page_journey h3 {
+  padding: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: capitalize;
+  color: #000;
+}
+/* line 123, ../sass/partials/_journey.scss */
+#page_journey h3 {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+  width: 70%;
+  text-align: center;
+}
+/* line 131, ../sass/partials/_journey.scss */
+#page_journey p {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  padding-left: 30px;
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+@media all and (min-width: 520px) {
+  /* line 159, ../sass/partials/_journey.scss */
+  #page_journey h1, #page_journey h3 {
+    font-size: 26px;
+  }
+}
+@media all and (min-width: 930px) {
+  /* line 171, ../sass/partials/_journey.scss */
+  .prev:hover {
+    cursor: sw-resize;
+  }
+
+  /* line 174, ../sass/partials/_journey.scss */
+  .next:hover {
+    cursor: ne-resize;
+  }
+}
+/* line 1, ../sass/partials/_contact.scss */
+#page_contact::before {
+  content: "Contact";
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  color: #d6dadc;
+  font-family: "Lighthouse";
+  font-size: 7em;
+  font-size: 25vw;
+  letter-spacing: 10px;
+  text-align: center;
+  opacity: 0;
+  -moz-animation: fadeIn_light ease-in 1;
+  -webkit-animation: fadeIn_light ease-in 1;
+  animation: fadeIn_light ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* line 24, ../sass/partials/_contact.scss */
+#page_contact {
+  overflow: hidden;
+}
+/* line 29, ../sass/partials/_contact.scss */
+#page_contact #whoami {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 50px;
+}
+/* line 35, ../sass/partials/_contact.scss */
+#page_contact #whoami p {
+  font-family: "Josefin Sans";
+  padding: 90px;
+  text-align: center;
+  line-height: 20px;
+  opacity: 0;
+}
+/* line 43, ../sass/partials/_contact.scss */
+#page_contact .contact_tools {
+  overflow: hidden;
+}
+/* line 47, ../sass/partials/_contact.scss */
+#page_contact h2 {
+  margin: 25px auto;
+  font-family: "Anonymous Pro";
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
+}
+/* line 54, ../sass/partials/_contact.scss */
+#page_contact h2 a {
+  color: #d0a0fa;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 30px;
+  background: #1a1a1a;
+  border-bottom: 1px solid transparent;
+  display: block;
+  width: 210px;
+  margin: auto;
+  cursor: pointer;
+  -moz-transition: all, 0.8s;
+  -o-transition: all, 0.8s;
+  -webkit-transition: all, 0.8s;
+  transition: all, 0.8s;
+}
+/* line 69, ../sass/partials/_contact.scss */
+#page_contact h2 a:hover {
+  cursor: pointer;
+  background: #140224;
+  border-bottom: 1px solid #9427f4;
+}
+/* line 77, ../sass/partials/_contact.scss */
+#page_contact .message {
+  width: 70%;
+  margin-left: 15%;
+  position: absolute;
+  top: 40px;
+  padding: 80px 0;
+  font-family: "Anonymous Pro";
+  font-size: 15px;
+  text-align: center;
+  color: #9427f4;
+  background: #e8d1fd;
+  display: none;
+}
+/* line 91, ../sass/partials/_contact.scss */
+#page_contact #formulaire {
+  display: none;
+  overflow: hidden;
+  padding-top: 30px;
+  background: rgba(239, 223, 253, 0.9);
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+/* line 105, ../sass/partials/_contact.scss */
+#page_contact span {
+  display: block;
+  float: right;
+  padding: 5px;
+  font-size: 30px;
+  margin-right: 3%;
+  cursor: pointer;
+  -moz-transition: all, 0.4s;
+  -o-transition: all, 0.4s;
+  -webkit-transition: all, 0.4s;
+  transition: all, 0.4s;
+}
+/* line 115, ../sass/partials/_contact.scss */
+#page_contact span:hover {
+  cursor: pointer;
+  color: #9427f4;
+}
+/* line 119, ../sass/partials/_contact.scss */
+#page_contact form {
+  padding: 0;
+  background: transparent;
+  margin: 0 auto;
+  width: 65%;
+  max-width: 600px;
+}
+/* line 128, ../sass/partials/_contact.scss */
+#page_contact form li {
+  position: relative;
+  margin: 65px 0;
+  font-family: "Josefin Sans";
+  letter-spacing: 3px;
+}
+/* line 61, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:-moz-placeholder, #page_contact form textarea.balloon:-moz-placeholder {
+  color: #f7f7f7;
+  text-indent: 0;
+  font-weight: 300;
+}
+/* line 64, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon::-moz-placeholder, #page_contact form textarea.balloon::-moz-placeholder {
+  color: #f7f7f7;
+  text-indent: 0;
+  font-weight: 300;
+}
+/* line 67, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:-ms-input-placeholder, #page_contact form textarea.balloon:-ms-input-placeholder {
+  color: #f7f7f7;
+  text-indent: 0;
+  font-weight: 300;
+}
+/* line 56, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon::-webkit-input-placeholder, #page_contact form textarea.balloon::-webkit-input-placeholder {
+  color: #f7f7f7;
+  text-indent: 0;
+  font-weight: 300;
+}
+/* line 149, ../sass/partials/_contact.scss */
+#page_contact form input.balloon, #page_contact form textarea.balloon {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  color: #f7f7f7;
+  background: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  border: 1px solid transparent;
+  font-family: "Josefin Sans";
+  letter-spacing: 3px;
+  font-size: 14px;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+/* line 169, ../sass/partials/_contact.scss */
+#page_contact form input.balloon + label, #page_contact form textarea.balloon + label {
+  display: inline-block;
+  position: absolute;
+  height: 40px;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  line-height: 40px;
+  color: #000;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+/* line 190, ../sass/partials/_contact.scss */
+#page_contact form input.balloon + label:after, #page_contact form textarea.balloon + label:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 50%;
+  margin-left: -3px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid rgba(122, 184, 147, 0);
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+/* line 210, ../sass/partials/_contact.scss */
+#page_contact form .active.balloon, #page_contact form .balloon:focus, #page_contact form .balloon:active {
+  background: #FFF;
+  color: #000;
+  border: 1px solid #dcb9fb;
+}
+/* line 219, ../sass/partials/_contact.scss */
+#page_contact form .active.balloon + label, #page_contact form .balloon:focus + label, #page_contact form .balloon:active + label {
+  color: #FFF;
+  text-shadow: 0 1px 0 rgba(247, 247, 247, 0.4);
+  background: #000;
+  -moz-transform: translateY(-48px);
+  -ms-transform: translateY(-48px);
+  -webkit-transform: translateY(-48px);
+  transform: translateY(-48px);
+}
+/* line 225, ../sass/partials/_contact.scss */
+#page_contact form .active.balloon + label:after, #page_contact form .balloon:focus + label:after, #page_contact form .balloon:active + label:after {
+  border-top: 4px solid #000;
+}
+/* line 233, ../sass/partials/_contact.scss */
+#page_contact form textarea.balloon {
+  display: block;
+  height: 150px;
+  padding: 15px;
+}
+/* line 61, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:focus:-moz-placeholder, #page_contact form input.balloon:active:-moz-placeholder,
+#page_contact form textarea.balloon:focus:-moz-placeholder, #page_contact form textarea.balloon:active:-moz-placeholder,
+#page_contact form .active.balloon:-moz-placeholder {
+  color: #bdbdbd;
+}
+/* line 64, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:focus::-moz-placeholder, #page_contact form input.balloon:active::-moz-placeholder,
+#page_contact form textarea.balloon:focus::-moz-placeholder, #page_contact form textarea.balloon:active::-moz-placeholder,
+#page_contact form .active.balloon::-moz-placeholder {
+  color: #bdbdbd;
+}
+/* line 67, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:focus:-ms-input-placeholder, #page_contact form input.balloon:active:-ms-input-placeholder,
+#page_contact form textarea.balloon:focus:-ms-input-placeholder, #page_contact form textarea.balloon:active:-ms-input-placeholder,
+#page_contact form .active.balloon:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+/* line 56, ../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+#page_contact form input.balloon:focus::-webkit-input-placeholder, #page_contact form input.balloon:active::-webkit-input-placeholder,
+#page_contact form textarea.balloon:focus::-webkit-input-placeholder, #page_contact form textarea.balloon:active::-webkit-input-placeholder,
+#page_contact form .active.balloon::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+/* line 248, ../sass/partials/_contact.scss */
+#page_contact form #thebutton {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  background: #f7f7f7;
+  margin: -20px auto 100px;
+  border-radius: 3px;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+/* line 258, ../sass/partials/_contact.scss */
+#page_contact form #thebutton input#bouton {
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+  text-indent: -15px;
+  font-family: "Josefin Sans";
+  letter-spacing: 3px;
+  font-size: 9px;
+  color: #000;
+  text-transform: uppercase;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+/* line 280, ../sass/partials/_contact.scss */
+#page_contact form #thebutton i {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 50px;
+  line-height: 50px;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+/* line 294, ../sass/partials/_contact.scss */
+#page_contact form #thebutton:hover {
+  color: #FFF;
+  background: #000;
+}
+/* line 298, ../sass/partials/_contact.scss */
+#page_contact form #thebutton:hover input#bouton {
+  color: #FFF;
+  cursor: pointer;
+}
+/* line 302, ../sass/partials/_contact.scss */
+#page_contact form #thebutton:hover i {
+  color: #FFF;
+  right: 7px;
+  top: -10px;
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+@media all and (min-width: 520px) {
+  /* line 340, ../sass/partials/_contact.scss */
+  #page_contact form input#bouton + label,
+  #page_contact form input.balloon + label,
+  #page_contact form textarea.balloon + label {
+    font-size: 12px;
+  }
+  /* line 348, ../sass/partials/_contact.scss */
+  #page_contact form #thebutton input#bouton {
+    text-indent: 0;
+    font-size: 12px;
+  }
+  /* line 352, ../sass/partials/_contact.scss */
+  #page_contact form #thebutton i {
+    font-size: 25px;
+  }
+}
+@media all and (min-width: 769px) {
+  /* line 372, ../sass/partials/_contact.scss */
+  #page_contact .message {
+    width: 40%;
+    margin-left: 30%;
+    top: 90px;
+  }
+  /* line 378, ../sass/partials/_contact.scss */
+  #page_contact #whoami p {
+    padding: 160px;
+  }
+  /* line 382, ../sass/partials/_contact.scss */
+  #page_contact h2 {
+    margin: 0;
+    width: 33.33%;
+    float: left;
+  }
+}
+/* line 1, ../sass/partials/_scrollbar.scss */
+.mCSB_inside > .mCSB_container {
+  margin: 0;
+}
+
+/* line 9, ../sass/partials/_scrollbar.scss */
+.mCSB_scrollTools {
+  margin: 5px 0 10px 0;
+}
+
+/* line 13, ../sass/partials/_scrollbar.scss */
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: rgba(10, 224, 229, 0.6);
+}
+
+/* line 21, ../sass/partials/_scrollbar.scss */
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #0ae0e5;
+}
+
+/* line 28, ../sass/partials/_scrollbar.scss */
+.mCSB_dragger_bar {
+  cursor: pointer;
+}
+
+/* line 31, ../sass/partials/_scrollbar.scss */
+.mCSB_dragger_bar:hover {
+  cursor: pointer;
+}
